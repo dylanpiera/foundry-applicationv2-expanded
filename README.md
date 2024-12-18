@@ -1,5 +1,5 @@
 # Foundry AppV2 Expanded
-This is an opinionated expansion of the ApplicationV2 framework introduced in FoundryV12 and comes with two classes; `ApplicationV2Expanded` and `DocumentSheetV2Expanded` as well as a handful of helpful Mixins.
+This is an opinionated expansion of the ApplicationV2 framework introduced in FoundryV12 and comes with four classes; `ApplicationV2Expanded`, `DocumentSheetV2Expanded`, `ActorSheetV2Expanded` and `ItemSheetV2Expanded` as well as a handful of helpful Mixins.
 
 ## How to use
 You can use these files in a couple of ways:
