@@ -36,13 +36,13 @@ The following features from AppV1 DocumentSheet are not (yet) implemented:
 #### ActorSheetV2Expanded
 `appv2expanded.applications.ActorSheetV2Expanded`
 - All of DocumentSheetV2Expanded plus...
-- Adds Actor specific Drag & Drop handling from the [Actor Drag & Drop Mixin](#actor-drag-and-drop)
+- Adds Actor specific Drag & Drop handling from the [Actor Drag & Drop Mixin](#actor-drag--drop)
 - Adds `actor` and `token` properties to `_prepareContext`
 
 #### ItemSheetV2Expanded
 `appv2expanded.applications.ItemSheetV2Expanded`
 - All of DocumentSheetV2Expanded plus...
-- Adds Item specific Drag & Drop handling from the [Item Drag & Drop Mixin](#item-drag-and-drop)
+- Adds Item specific Drag & Drop handling from the [Item Drag & Drop Mixin](#item-drag--drop)
 - Adds `actor` and `item` properties to `_prepareContext`
 
 ### Mixins
@@ -55,7 +55,7 @@ The following features from AppV1 DocumentSheet are not (yet) implemented:
 
 #### Actor Drag & Drop
 `appv2expanded.mixins.addActorDragDropHandling`
-> **Note**: Assumes that the Application also makes use of the above [Drag & Drop Mixin](#drag-and-drop).
+> **Note**: Assumes that the Application also makes use of the above [Drag & Drop Mixin](#drag--drop).
 
 - Adds default `_handleDrop` handling like AppV1's implementation
   - ActiveEffects not currently owned by the Actor get added to the Actor
@@ -65,7 +65,7 @@ The following features from AppV1 DocumentSheet are not (yet) implemented:
 
 #### Item Drag & Drop
 `appv2expanded.mixins.addItemDragDropHandling`
-> **Note**: Assumes that the Application also makes use of the above [Drag & Drop Mixin](#drag-and-drop).
+> **Note**: Assumes that the Application also makes use of the above [Drag & Drop Mixin](#drag--drop).
 
 - Adds default `_handleDrop` handling like AppV1's implementation
   - ActiveEffects not currently owned by the Item get added to the Item
