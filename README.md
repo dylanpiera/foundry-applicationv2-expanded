@@ -20,7 +20,7 @@ Besides this, you can find useful tips on how to use or convert your old Foundry
 
 #### DocumentSheetV2Expanded
 `appv2expanded.applications.DocumentSheetV2Expanded`
-- Adds the basic Drag & Drop Mixin
+- [Adds the basic Drag & Drop Mixin](#drag-and-drop)
 - Defaults 'form.submitOnChange' and 'window.resizable' options to true
 - Adds the "[token]" prefix to the title of Token Actor Sheets
 - Adds default values found in AppV1 `DocumentSheet#getData` to `_prepareContext`
@@ -36,13 +36,13 @@ The following features from AppV1 DocumentSheet are not (yet) implemented:
 #### ActorSheetV2Expanded
 `appv2expanded.applications.ActorSheetV2Expanded`
 - All of DocumentSheetV2Expanded plus...
-- Adds Actor specific Drag & Drop handling from the Actor Drag & Drop Mixin
+- Adds Actor specific Drag & Drop handling from the [Actor Drag & Drop Mixin](#actor-drag-and-drop)
 - Adds `actor` and `token` properties to `_prepareContext`
 
 #### ItemSheetV2Expanded
 `appv2expanded.applications.ItemSheetV2Expanded`
 - All of DocumentSheetV2Expanded plus...
-- Adds Item specific Drag & Drop handling from the Item Drag & Drop Mixin
+- Adds Item specific Drag & Drop handling from the [Item Drag & Drop Mixin](#item-drag-and-drop)
 - Adds `actor` and `item` properties to `_prepareContext`
 
 ### Mixins
