@@ -14,11 +14,11 @@ Besides this, you can find useful tips on how to use or convert your old Foundry
 
 ## What is added?
 ### Applications
-#### ApplicationV2Expanded
+#### [ApplicationV2Expanded](/applications/application.mjs)
 `appv2expanded.applications.ApplicationV2Expanded`
 - Adds the basic Drag & Drop Mixin
 
-#### DocumentSheetV2Expanded
+#### [DocumentSheetV2Expanded](/applications/document-sheet.mjs)
 `appv2expanded.applications.DocumentSheetV2Expanded`
 - [Adds the basic Drag & Drop Mixin](#drag--drop)
 - Defaults 'form.submitOnChange' and 'window.resizable' options to true
@@ -33,27 +33,27 @@ The following features from AppV1 DocumentSheet are not (yet) implemented:
 - Secrets
 - Editor handling (as this is integrated with the new editor)
 
-#### ActorSheetV2Expanded
+#### [ActorSheetV2Expanded](/applications/actor-sheet.mjs)
 `appv2expanded.applications.ActorSheetV2Expanded`
 - All of DocumentSheetV2Expanded plus...
 - Adds Actor specific Drag & Drop handling from the [Actor Drag & Drop Mixin](#actor-drag--drop)
 - Adds `actor` and `token` properties to `_prepareContext`
 
-#### ItemSheetV2Expanded
+#### [ItemSheetV2Expanded](/applications/item-sheet.mjs)
 `appv2expanded.applications.ItemSheetV2Expanded`
 - All of DocumentSheetV2Expanded plus...
 - Adds Item specific Drag & Drop handling from the [Item Drag & Drop Mixin](#item-drag--drop)
 - Adds `actor` and `item` properties to `_prepareContext`
 
 ### Mixins
-#### Drag & Drop
+#### [Drag & Drop](/mixins/drag-drop.mjs)
 `appv2expanded.mixins.addDragDropHandling`
 - Adds `dragDrop` parameter to `DEFAULT_OPTIONS` based on AppV1 `DragDropConfiguration`.
 - Initializes `DragDrop` handlers similar to AppV1's implementation
 - Adds `_canDragStart`, `_canDragDrop`, `_onDragStart`, `_onDragOver`, `#onDrop`, `_handleDrop` functions to assist with the Drag & Drop workflow, similar to AppV1's implementation
   - **Breaking change for AppV1 Migrations**: `_onDrop` has been made private, instead you should use `_handleDrop`. This is so there is no conflict in receiving the event's datatransfer, as it may only be read once. You can check the source for more details.
 
-#### Actor Drag & Drop
+#### [Actor Drag & Drop](/mixins/actor-drag-drop.mjs)
 `appv2expanded.mixins.addActorDragDropHandling`
 > **Note**: Assumes that the Application also makes use of the above [Drag & Drop Mixin](#drag--drop).
 
@@ -63,14 +63,14 @@ The following features from AppV1 DocumentSheet are not (yet) implemented:
   - A Folder of items dropped on the Actor will create all items within it on the Actor
 - Adds `_onSortItem` handling like AppV1's implementation
 
-#### Item Drag & Drop
+#### [Item Drag & Drop](/mixins/item-drag-drop.mjs)
 `appv2expanded.mixins.addItemDragDropHandling`
 > **Note**: Assumes that the Application also makes use of the above [Drag & Drop Mixin](#drag--drop).
 
 - Adds default `_handleDrop` handling like AppV1's implementation
   - ActiveEffects not currently owned by the Item get added to the Item
 
-#### Tab Handling
+#### [Tab Handling](/mixins/tabs.mjs)
 `appv2expanded.mixins.addTabsHandling`
 
 The tab handling is done through a combination of some additional properties & method extensions, as well as some handlebars templating.
@@ -143,7 +143,7 @@ After this there's only one final step left, which is adding the correct tab's c
 
 Following this pattern, you can make each tab its own part of the application, allowing you to put each tab in a different hbs file and allowing individual rerenders of those parts.
 
-#### AppV1 Header Button Compatability
+#### [AppV1 Header Button Compatability](/mixins/appv1-header-button.mjs)
 `appv2expanded.mixins.addAppV1HeaderButtonCompatability`
 
 Many modules currently do not support ApplicationV2, and as such if you move your Actor/Item sheets over to AppV2, and your users are using any module that adds header buttons to AppV1 sheets, those modules will break as they won't know how to add their header buttons.
